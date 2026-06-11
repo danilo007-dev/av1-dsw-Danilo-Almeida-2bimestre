@@ -1,24 +1,38 @@
 export default function TarefaForm({
   descricao,
   setDescricao,
-  cadastrarTarefa
+  cadastrarTarefa,
+  tarefaEditando,
+  cancelarEdicao
 }) {
   return (
     <form
       onSubmit={cadastrarTarefa}
-      className="lg:w-2/3 w-full mx-auto mb-8 flex gap-3"
+      className="lg:w-2/3 w-full mx-auto mb-10 flex flex-col sm:flex-row gap-4 px-4 sm:px-0 items-center"
     >
       <input
         type="text"
         value={descricao}
         onChange={(event) => setDescricao(event.target.value)}
-        placeholder="Digite uma tarefa"
-        className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+        placeholder="O que você precisa fazer hoje?"
+        className="w-full bg-white rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 text-base outline-none text-gray-700 py-3 px-4 leading-8 transition-all duration-200 shadow-sm"
       />
 
-      <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-        Salvar
-      </button>
+      <div className="flex gap-2 w-full sm:w-auto">
+        <button className="flex-1 text-white bg-blue-600 font-semibold border-0 py-3 px-8 focus:outline-none hover:bg-blue-700 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+          {tarefaEditando ? "Atualizar" : "+ Adicionar"}
+        </button>
+        
+        {tarefaEditando && (
+          <button
+            type="button"
+            onClick={cancelarEdicao}
+            className="flex-1 text-gray-700 bg-gray-200 font-semibold border-0 py-3 px-8 focus:outline-none hover:bg-gray-300 rounded-lg shadow-sm hover:shadow-md transition-all whitespace-nowrap"
+          >
+            Cancelar
+          </button>
+        )}
+      </div>
     </form>
   )
 }

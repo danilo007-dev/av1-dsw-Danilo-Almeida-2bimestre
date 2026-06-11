@@ -131,7 +131,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\danilo_almeida\\Documents\\api-base-2bimestre\\backend\\generated\\prisma",
+      "value": "C:\\Users\\danilo_almeida\\Documents\\av1-dsw-Danilo-Almeida-2bimestre\\backend\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -145,7 +145,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\danilo_almeida\\Documents\\api-base-2bimestre\\backend\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\danilo_almeida\\Documents\\av1-dsw-Danilo-Almeida-2bimestre\\backend\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -159,7 +159,6 @@ const config = {
     "db"
   ],
   "activeProvider": "mysql",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
